@@ -1,12 +1,12 @@
 
 
-const Sequelize = require("sequelize");
-const {models} = require("../models/index");
+const Sequelize = require('sequelize');
+const {models} = require('../models/index');
 
 exports.getQuiz = (req, res, next) =>{
 	models.quiz.findAll()
 	.then(quizzes => {
-		res.render('views/quizzes.ejs', {quizzes});
+		res.render("quizzes", {quizzes})
 	})
-	.catch(error => next(error))
+	.catch(error => next(error));
 };

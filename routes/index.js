@@ -3,7 +3,7 @@
 
 var express = require('express');
 var router = express.Router();
-const model = require("../models/index");
+const model = require('../models/index');
 const quizController = require("../controllers/quiz_controller");
 
 
@@ -18,7 +18,6 @@ router.get('/credits', function(req, res, next) {
 });
 
 /* GET quizzes page. */
-
 router.get('/quizzes', quizController.getQuiz);
 
 module.exports = router;

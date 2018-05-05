@@ -5,7 +5,16 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <p>Quizzes></p>
+    <h1>Quizzes></h1>
     <a href="/">HOME</a>
+    <ul>
+      <% for (let i in quizzes) { %>
+      <% const quiz = quizzes[i]; %>
+      <il>
+        <%= quiz.question %> : <%= quiz.answer %>
+       </il> 
+
+      <% } %>
+    </ul>
   </body>
 </html>
